@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aikido</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
 </head>
 <body>
     <background="assets/css/img/photofondaikido"></background>
     <header>
         <h1> Association d'Aikido</h1>
         <nav>
-            <a href="index.php"> Accueil</a>
+            <a href="maquette.php"> Accueil</a>
             <a href="service.php">Activitées</a>
-            <a href="contact.php">Contact</a>
+            <a href="maquettecontact.php">Contact</a>
         </nav>
     </header>
 

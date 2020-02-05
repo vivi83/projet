@@ -1,7 +1,7 @@
 
 
 <h3>Contactez nous </h3>
-<form action="" >
+<form action="" method="get" >
 <div>
 <label for="name">Nom:</label>
 <input type=texte id="name" name="user_name">
