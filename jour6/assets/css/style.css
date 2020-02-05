@@ -28,7 +28,7 @@ a{
 }
 footer{background-color: blue;}
 
-input{
-text-align: right;
 
+form{
+    text-align:center ;
 }

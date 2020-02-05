@@ -12,11 +12,14 @@
 </div>
 <div>
     <label for="mail">Email:</label>
-    <input type="text" id="email" name="user_email">
-</div>
+    <input type="email" id="email" name="user_email" required>
+</div> 
 <div>
     <label for="mesage">Message:</label>
     <textarea id="message" name="user_message"></textarea>
 </div>
+<div>
+    <input type="submit" value="Enoyer">
+  </div>
 </form>
 
