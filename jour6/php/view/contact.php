@@ -16,7 +16,7 @@
 </div> 
 <div>
     <label for="mesage">Message:</label>
-    <textarea id="message" name="user_message"></textarea>
+    <textarea id="message" name="user_message" required></textarea>
 </div>
 <div>
     <input type="submit" value="Enoyer">
