@@ -8,6 +8,12 @@ h1{
     text-indent: 2.3em;
 }
 h3{
-    color: rgb(5, 60, 105)
-    
+    color: rgb(5, 60, 105)  
 }
+
+.colonnegauche{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
