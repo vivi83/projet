@@ -49,6 +49,22 @@ for ($i=0; $i < count($tableau) ; $i++)
 ?>
   </div>
     </section>
+
+<section >
+fetch("https://api.le-systeme-solaire.net/rest/bodies/")
+    // exécuté si l'URL a été contactée avec succès
+    // dans ce cas comme on va effectuer une action on a besoin d'une fonction qui prend en paramètre la réponse                à la requête
+    .then(function(response) {
+        // on retourne la réponse au format **JSON** (Javascript Object Notation)ou au format **text()**
+        return response.json() 
+    }) 
+    .then(function(data) {
+        // on récupère l'objet **JSON** et on peut ensuite le traiter
+        // dans cet exemple on l'affiche juste en console
+        console.log(data) 
+    })
+</section>
+
     <section class="gauche">
         <h3> Expériences Professionnelles</h3>
         <p>Stage développeur web à Bras  Décembre 2019<br>
