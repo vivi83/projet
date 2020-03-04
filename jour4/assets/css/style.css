@@ -1,0 +1,33 @@
+img{
+min-width:300px;
+}
+
+.ligne {
+    display: flex;
+    justify-content: space-between;
+}
+
+p{color: blue}
+
+.colonne1{
+    text-align: left;
+}
+
+.ligne div {padding:10px}
+
+#image2 {
+max-height: 400px;
+}
+
+#imageprincipale{
+    width:600PX;
+    border: solid 1px orange;
+}
+
+#imagefond{
+
+    width: 500%;
+}
+h3{
+    color:blue;
+}
