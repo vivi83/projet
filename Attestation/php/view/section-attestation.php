@@ -3,7 +3,7 @@
 <form action="" method="POST">
     <input type="text" name="nom" requiered placeholder="Entrer votre nom">
     <input type="text" name="prenom" required placeholder="Entrer votre prénom">
-    <tetarea name="adresse" cols="60" rows="6" required placeholder="Entrer votre adresse"> </tetarea>
+    <textarea name="adresse" cols="60" rows="6" required placeholder="Entrer votre adresse"> </textarea>
     <h3> Cocher la raison de votre déplacement </h3>
     <label>
     <input type="radio" name="raison"required value="courses alimentaires">
@@ -37,14 +37,44 @@
 
 <?php
 
-// Code pour traiter le formulaire 
-function filtrer ($name)
-{
-    $info=$_REQUEST[$name]??"";
+require_once "php/mes-fonctions.php";
 
-    return $info;
+// Code pour traiter le formulaire 
+
+$identifiantFormulaire=filtrer("identifiantFormulaire");
+
+if($identifiantFormulaire=="declaration")
+{
+    $tableau=[
+        "nom" =>filtrer("nom"),
+        "prenom" =>filtrer("prenom"),
+        "adresse" => filtrer("adresse"),
+        "raison" => filtrer("raison"),
+    ];
+
+    extract($tableau);
+    if ($nom!=""
+    && $prenom!=""
+    && $adresse!=""
+    && $raison!="")
+    {
+        $tableau["numero"]=uniqid();
+        $tableau["dateDeclaration"]=date("Y-m-d H:i:s");
+
+      insererLigneSQL("declaration",$tableau);
+
+
+        echo "votre déclaration est bien enregistrée. Notez bien votre numéro d'attestation";
+    }
+    else 
+    {
+        echo "Veuillez fournir toutes les informations ";
+    }
+
+
 }
 
+?>
 
 
 
